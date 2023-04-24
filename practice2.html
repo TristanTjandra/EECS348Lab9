@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <title>This is practice2</title>
+    <head>
+        <style>
+            #par{
+                border-style:solid;
+                border-width: 5px;
+            }
+        </style> 
+    </head>
+    
+    <body>
+        <p id="par">Rock Chalk Jayhawk</p id="par">
+        <h3>Enter paragraph color values (RGB): </h3>
+        <input type="text" id="parR" value>
+        <input type="text" id="parG" value>
+        <input type="text" id="parB" value>
+        <h3>Enter border color values (RGB):</h3>
+        <input type="text" id="borR" value>
+        <input type="text" id="borG" value>
+        <input type="text" id="borB" value>
+        <h3>Enter border width value:</h3>
+        <input type="text" id="bWidth" value>
+        
+        <button onclick='changeColor()'>Click me!</button>
+        <script>
+            let pR = document.getElementById("parR");
+            let pG = document.getElementById("parG");
+            let pB = document.getElementById("parB");
+            let bR = document.getElementById("borR");
+            let bG = document.getElementById("borG");
+            let bB = document.getElementById("borB");
+            let bW = document.getElementById("bWidth");
+
+            let pg = document.getElementById("par");
+            function changeColor(){
+                pg.style.borderColor = `rgb(${bR.value},${bG.value},${bB.value})`;
+                pg.style.borderWidth = parseInt(bW.value)+"px";
+                pg.style.backgroundColor = `rgb(${pR.value},${pG.value},${pB.value})`;
+            }
+        </script>
+    </body>
+    
+</html>
